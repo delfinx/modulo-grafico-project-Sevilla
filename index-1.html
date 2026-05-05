@@ -1,131 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modulo Grafico</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo Grafico</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-/* HEADER NERO */
-.header {
-    background-color: black;
-    color: white;
-    padding: 15px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+        /* HEADER NERO */
+        .header {
+            background-color: black;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-/* LOGO */
-.logo img {
-    height: 50px;
-    filter: brightness(0) invert(1);
-}
+        /* LOGO */
+        .logo img {
+            height: 50px;
+            filter: brightness(0) invert(1);
+        }
 
-/* MENU */
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
+        /* MENU */
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
 
-.nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
 
-.nav a:hover {
-    opacity: 0.7;
-}
+        .nav a:hover {
+            opacity: 0.7;
+        }
 
-/* ICONE */
-.icons img {
-    height: 28px;
-    margin-left: 15px;
-    cursor: pointer;
-}
+        /* ICONE */
+        .icons img {
+            height: 28px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
 
-/* HERO */
-.hero {
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 120px 20px;
-}
+        /* HERO */
+        .hero {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 120px 20px;
+        }
 
-.hero h1 {
-    font-size: 42px;
-    max-width: 800px;
-    margin: auto;
-    font-weight: bold;
-}
+        .hero h1 {
+            font-size: 42px;
+            max-width: 800px;
+            margin: auto;
+            font-weight: bold;
+        }
 
-/* BOTTONE */
-.btn {
-    margin-top: 30px;
-    display: inline-block;
-    padding: 12px 25px;
-    border: 1px solid black;
-    border-radius: 30px;
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-}
+        /* BOTTONE */
+        .btn {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 12px 25px;
+            border: 1px solid black;
+            border-radius: 30px;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
 
-.btn:hover {
-    background-color: black;
-    color: white;
-}
-</style>
+        .btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .heart {
+            background-color: black;
+            width: 100%;
+            height: 400px;
+            /* puoi modificarla */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner-box {
+            background-color: #f2f2f2;
+            width: 80%;
+            height: 80%;
+        }
+    </style>
 
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-    
-    <!-- LOGO -->
-    <div class="logo" style="margin-left: 3%;">
-        <img src="https://www.modulografico.com/media/images/logo.webp" alt="logo">
+    <!-- HEADER -->
+    <header class="header">
+
+        <!-- LOGO -->
+        <div class="logo" style="margin-left: 3%; margin-top: 0.5%;">
+            <img src="https://www.modulografico.com/media/images/logo.webp" alt="logo">
+        </div>
+
+        <!-- MENU -->
+        <nav class="nav" style="margin-right: 3%;">
+            <a href="#">Quiénes somos</a>
+            <a href="#">Que hacemos</a>
+            <a href="#">Porque nosotros</a>
+
+            <!-- ICONE -->
+            <div class="icons">
+                <a href="/contact.html">
+                    <img
+                        src="https://static.vecteezy.com/system/resources/thumbnails/012/871/377/small_2x/google-maps-icon-google-product-illustration-free-png.png">
+                </a>
+
+                <a href="maps.html">
+                    <img src="/telephone_image-removebg-preview.png">
+                </a>
+
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" ;>
+        <h1>
+            Impresiones impactantes respetuosas con el medioambiente
+        </h1>
+
+        <a href="#" class="btn" style=>fotos y vídeos</a>
+    </section>
+
+    <!-- HEART -->
+    <div class="heart">
+        <div class="inner-box">
+            <h1>
+                ¿Buscas servicios de impresión en Sevilla?
+            </h1><!-- contenuto qui dentro -->
+            <p>
+                Entonces, te invitamos a contactarnos. Combinamos nuestra experiencia, creatividad y equipos de última
+                generación para ofrecerte el catálogo más completo y variado de servicios de impresión en Sevilla.
+                Podemos ayudarte con todo lo que necesites, desde folletos y rotulaciones hasta merchandising. ¡Descubre
+                todo lo que podemos hacer y disfruta de una ecoedición amigable con el planeta!
+            </p>
+        </div>
     </div>
 
-    <!-- MENU -->
-    <nav class="nav" style="margin-right: 3%;">
-        <a href="#">Quiénes somos</a>
-        <a href="#">Que hacemos</a>
-        <a href="#">Porque nosotros</a>
 
-        <!-- ICONE -->
-        <div class="icons">
-            <a href="/contact.html">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/012/871/377/small_2x/google-maps-icon-google-product-illustration-free-png.png">
-            </a>
 
-            <a href="maps.html">
-                <img src="/telephone_image-removebg-preview.png">
-            </a>
-                
-            
-        </div>
-        
-    </nav>
 
-</header>
 
-<!-- HERO -->
-<section class="hero";>
-    <h1>
-        Impresiones impactantes respetuosas con el medioambiente
-    </h1>
-
-    <a href="#" class="btn" style=>fotos y vídeos</a>
-</section>
+    </heart>
 
 </body>
+
 </html>
