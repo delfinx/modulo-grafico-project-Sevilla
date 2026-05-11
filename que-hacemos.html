@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Modulo Grafico</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: black;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* LOGO */
+        .logo img {
+            height: 55px;
+            filter: brightness(0) invert(1);
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        /* MENU */
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            position: relative;
+        }
+
+        .nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ICONS */
+        .icons img {
+            height: 30px;
+            margin-left: 18px;
+            cursor: pointer;
+        }
+
+        .icons img:hover {
+            transform: translateY(-3px) scale(1.08);
+        }
+
+        /* HERO */
+        .hero {
+            padding: 120px 20px 80px;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 25px;
+            animation: fadeUp 1s ease;
+        }
+
+        .hero p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.7;
+            color: #444;
+            animation: fadeUp 1.2s ease;
+        }
+
+        /* SECTION */
+        .services-section {
+            background: linear-gradient(135deg, #ff4d2d, #ff6b4a);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* LIGHT EFFECT */
+        .services-section::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            top: -200px;
+            right: -150px;
+            filter: blur(30px);
+        }
+
+        /* BOX */
+        .services-container {
+            width: 85%;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.93);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            border-radius: 40px;
+            padding: 70px;
+
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+
+            background-image:
+                linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                url('https://tse1.mm.bing.net/th/id/OIP.zagGy3pg6RnWHe8dRfpX7gHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1,3&o=7&rm=3');
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .services-container:hover {
+            transform: translateY(-8px);
+        }
+
+        /* TITLE */
+        .services-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .services-title h2 {
+            font-size: 48px;
+            margin-bottom: 25px;
+        }
+
+        .services-title p {
+            font-size: 20px;
+            color: #444;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 30px;
+            padding: 40px 30px;
+            text-align: center;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 75px;
+            margin-bottom: 25px;
+        }
+
+        .card h3 {
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        .card p {
+            font-size: 17px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE */
+        @media(max-width: 900px) {
+
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 25px;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .services-container {
+                width: 92%;
+                padding: 40px 25px;
+            }
+
+            .services-title h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="https://www.modulografico.com/media/images/logo.webp" alt="logo">
+        </div>
+
+        <!-- MENU -->
+        <nav class="nav">
+            <a href="index-1.html">Quiénes somos</a>
+            <a href="que-hacemos.html">Que hacemos</a>
+            <a href="porque-nosotros.html">Porque nosotros</a>
+
+            <div class="icons">
+                <a href="#">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/012/871/377/small_2x/google-maps-icon-google-product-illustration-free-png.png">
+                </a>
+
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png">
+                </a>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>¿Qué tipo de servicios encontrarás aquí?</h1>
+
+        <p>
+            No nos gusta limitar la creatividad. Por eso nos especializamos en distintos tipos
+            de servicios de impresión. Explora los más populares:
+        </p>
+
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section">
+
+        <div class="services-container">
+
+            <div class="services-title">
+
+                <h2>Servicios de impresión</h2>
+
+                <p>
+                    Descubre soluciones profesionales de impresión diseñadas para empresas,
+                    particulares y organismos. Calidad premium y acabados modernos.
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <!-- CARD 1 -->
+                <div class="card">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+                    <h3>Impresión offset y digital</h3>
+
+                    <p>
+                        Ideal para folletos, volantes, revistas,
+                        catálogos, papelería corporativa, etc.
+                    </p>
+
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png">
+
+                    <h3>Impresión en gran formato</h3>
+
+                    <p>
+                        En lienzos, lonas, vinilos y más.
+                        Realizamos rotulaciones en todo tipo de materiales.
+                    </p>
+
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png">
+
+                    <h3>Multisoporte y merchandising</h3>
+
+                    <p>
+                        Grabados en diferentes superficies,
+                        como metacrilato y madera.
+                    </p>
+
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="card">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
+
+                    <h3>Cartelería y etiquetaje</h3>
+
+                    <p>
+                        Coméntanos lo que necesitas para tu negocio
+                        y nosotros lo haremos realidad.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
