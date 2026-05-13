@@ -1,11 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maps page</title>
+    <title>Contacto - Modulo Grafico</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        /* HEADER */
+.header {
+    background-color: black;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo img {
+    height: 55px;
+    filter: brightness(0) invert(1);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* MENU */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+}
+
+/* LINEA ANIMATA */
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* ICONS */
+.icons img {
+    height: 30px;
+    margin-left: 18px;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    transform: translateY(-3px) scale(1.08);
+}
+
+        /* HERO */
+        .hero {
+            background:
+                radial-gradient(circle at top left, #2a2a2a 0%, transparent 35%),
+                radial-gradient(circle at bottom right, #1a1a1a 0%, transparent 35%),
+                linear-gradient(135deg, #111111, #1c1c1c);
+
+            padding: 90px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* CONTAINER */
+        .contact-container {
+            width: 85%;
+            background: rgba(255,255,255,0.94);
+
+            border-radius: 35px;
+
+            display: flex;
+            gap: 50px;
+
+            padding: 50px;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+
+            animation: fadeUp 1s ease;
+        }
+
+        /* MAPPA */
+        .map-section {
+            flex: 1;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* INFO */
+        .info-section {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-section h1 {
+            font-size: 48px;
+            margin-bottom: 25px;
+            color: #111;
+        }
+
+        .info-section p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        /* CARDS */
+        .info-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            margin-top: 20px;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+            transition: 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .info-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+            color: black;
+        }
+
+        .info-card p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 1000px) {
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .info-section h1 {
+                font-size: 38px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+
 </head>
+
 <body>
-    
+
+    <!-- HEADER -->
+    <header class="header">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="https://www.modulografico.com/media/images/logo.webp" alt="logo">
+    </div>
+
+    <!-- MENU -->
+    <nav class="nav">
+
+        <a href="index-1.html">Quiénes somos</a>
+        <a href="que-hacemos.html">Que hacemos</a>
+        <a href="porque-nosotros.html">Porque nosotros</a>
+
+        <div class="icons">
+
+            <a href="maps.html">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/012/871/377/small_2x/google-maps-icon-google-product-illustration-free-png.png">
+            </a>
+
+            
+
+        </div>
+
+    </nav>
+
+</header>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="contact-container">
+
+            <!-- MAPPA -->
+            <div class="map-section">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12673.597773293468!2d-5.9765201!3d37.4276675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126966c8220c6d%3A0x54989ed199f9e3ec!2sM%C3%B3dulo%20Gr%C3%A1fico%20Servicios%20Integrales%20de%20Impresi%C3%B3n%20S.L.L.!5e0!3m2!1ses!2ses!4v1683641713656!5m2!1ses!2ses"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+            <!-- INFO -->
+            <div class="info-section">
+
+                <h1>
+                    ¿Dónde estamos?
+                </h1>
+
+                <p>
+                    Nuestra estructura está situada en Sevilla, en una posición estratégica para ofrecer servicios de impresión rápidos, modernos y sostenibles.
+                </p>
+
+                <div class="info-card">
+                    <h3>📍 Dirección</h3>
+                    <p>
+                        C. Arqueología, 10-12<br>
+                        Parque Empresarial Torneo<br>
+                        41015 Sevilla
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>📞 Contacto</h3>
+                    <p>
+                        954 975 800<br>
+                        info@modulografico.com
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🕒 Horarios</h3>
+                    <p>
+                        Lunes a jueves: 8:30 - 14:00 / 16:00 - 19:00<br>
+                        Viernes: 8:30 - 15:00
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
 </body>
+
 </html>
